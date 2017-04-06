@@ -1,0 +1,27 @@
+<%= form_for(spltrain) do |f| %>
+  <% if spltrain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spltrain.errors.count, "error") %> prohibited this spltrain from being saved:</h2>
+
+      <ul>
+      <% spltrain.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_area :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

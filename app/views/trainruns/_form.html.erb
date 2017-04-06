@@ -1,0 +1,32 @@
+<%= form_for(trainrun) do |f| %>
+  <% if trainrun.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trainrun.errors.count, "error") %> prohibited this trainrun from being saved:</h2>
+
+      <ul>
+      <% trainrun.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_area :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :trainnum %>
+    <%= f.number_field :trainnum %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Trainruns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Date</th>
+      <th>Trainnum</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trainruns.each do |trainrun| %>
+      <tr>
+        <td><%= trainrun.status %></td>
+        <td><%= trainrun.date %></td>
+        <td><%= trainrun.trainnum %></td>
+        <td><%= link_to 'Show', trainrun %></td>
+        <td><%= link_to 'Edit', edit_trainrun_path(trainrun) %></td>
+        <td><%= link_to 'Destroy', trainrun, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trainrun', new_trainrun_path %>

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :passengers
+  resources :schedules
+  resources :runschedules
+  resources :trainruns
+  resources :spltrains
   resources :tickets
   resources :stations
   resources :trains

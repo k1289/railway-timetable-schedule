@@ -1,0 +1,32 @@
+<%= form_for(runschedule) do |f| %>
+  <% if runschedule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(runschedule.errors.count, "error") %> prohibited this runschedule from being saved:</h2>
+
+      <ul>
+      <% runschedule.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :newarrtime %>
+    <%= f.text_field :newarrtime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :newdepttime %>
+    <%= f.text_field :newdepttime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :newplatformnum %>
+    <%= f.number_field :newplatformnum %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
