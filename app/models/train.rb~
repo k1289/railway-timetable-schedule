@@ -4,8 +4,8 @@ class Train
   property :name, type: String
   property :totalcapacity, type: Integer
   property :type, type: String
-  property :starttime, type: Time
-  property :endtime, type: Time
+  property :starttime, type: String
+  property :endtime, type: String
   property :rundays, type: String
 
 
