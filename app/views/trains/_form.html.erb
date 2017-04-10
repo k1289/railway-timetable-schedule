@@ -1,0 +1,52 @@
+<%= form_for(train) do |f| %>
+  <% if train.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(train.errors.count, "error") %> prohibited this train from being saved:</h2>
+
+      <ul>
+      <% train.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.number_field :number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_area :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :totalcapacity %>
+    <%= f.number_field :totalcapacity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.text_area :type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :starttime %>
+    <%= f.text_field :starttime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :endtime %>
+    <%= f.text_field :endtime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rundays %>
+    <%= f.text_field :rundays %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

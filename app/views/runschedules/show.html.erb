@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Newarrtime:</strong>
+  <%= @runschedule.newarrtime %>
+</p>
+
+<p>
+  <strong>Newdepttime:</strong>
+  <%= @runschedule.newdepttime %>
+</p>
+
+<p>
+  <strong>Newplatformnum:</strong>
+  <%= @runschedule.newplatformnum %>
+</p>
+
+<%= link_to 'Edit', edit_runschedule_path(@runschedule) %> |
+<%= link_to 'Back', runschedules_path %>

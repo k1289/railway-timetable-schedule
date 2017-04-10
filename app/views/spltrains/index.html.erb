@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Spltrains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spltrains.each do |spltrain| %>
+      <tr>
+        <td><%= spltrain.status %></td>
+        <td><%= spltrain.date %></td>
+        <td><%= link_to 'Show', spltrain %></td>
+        <td><%= link_to 'Edit', edit_spltrain_path(spltrain) %></td>
+        <td><%= link_to 'Destroy', spltrain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spltrain', new_spltrain_path %>

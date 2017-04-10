@@ -5,7 +5,7 @@ Rails.application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
- config.neo4j.session_type = :server_db
+  config.neo4j.session_type = :http
   config.neo4j.session_path = 'http://localhost:7474'
   # Do not eager load code on boot.
   config.eager_load = false

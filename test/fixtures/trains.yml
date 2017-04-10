@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  name: MyText
+  totalcapacity: 1
+  type: MyText
+  starttime: MyString
+  endtime: MyString
+  rundays: MyString
+
+two:
+  number: 1
+  name: MyText
+  totalcapacity: 1
+  type: MyText
+  starttime: MyString
+  endtime: MyString
+  rundays: MyString

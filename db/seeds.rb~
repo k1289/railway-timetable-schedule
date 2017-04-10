@@ -1,0 +1,14 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+query_string = <<query
+create 
+(_1: Train {number:12261, name:'Howrah-Mumbai-CST-Duronto-Express', type:'Duronto', starttime:'17:15', endtime:'19:40', totalcapacity:700, rundays:'Tu-W-Th'})
+query
+
+Neo4j::Session.current.query(query_string)
+
