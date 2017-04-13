@@ -3,6 +3,9 @@ class Runschedule
   property :newarrtime, type: Time
   property :newdepttime, type: Time
   property :newplatformnum, type: Integer
+  
+  has_one :out, :station
+  has_one :in, :trainrun
 
 
 

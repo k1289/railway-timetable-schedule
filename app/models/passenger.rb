@@ -4,6 +4,8 @@ class Passenger
   property :age, type: Integer
   property :gender, type: String
 
+  has_one :in, :ticket
+
 
 
 end

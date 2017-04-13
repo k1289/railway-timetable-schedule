@@ -4,6 +4,7 @@ class Trainrun
   property :date, type: Date
   property :trainnum, type: Integer
 
-
+  has_one :out, :train
+  has_many :in, :ticket
 
 end
